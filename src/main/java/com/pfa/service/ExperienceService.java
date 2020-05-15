@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Experience;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Experience;
 
 public interface ExperienceService {
 	
@@ -17,4 +18,5 @@ public interface ExperienceService {
 
 	void delete(Long id);
 
+	public List<Experience> getAll();
 }

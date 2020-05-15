@@ -1,5 +1,7 @@
 package com.pfa.rest;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pfa.Entity.Actualite;
+import com.pfa.entity.Actualite;
 import com.pfa.service.ActualiteService;
 
 
-
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api")
 public class ActualiteController {
@@ -32,6 +32,14 @@ public class ActualiteController {
 		log.info("actualite :{}", result.toString());
 		return result;
 	}
+	@GetMapping("/actualite")
+	public List<Actualite> getAllActualite(Long id) {
+		log.info(" get actualite");
+		List<Actualite> result = actualiteService.getAll();
+		log.info("actualite :{}", result.toString());
+		return result;
+	}
+	
 	
 	
 	@DeleteMapping("/actualite/{id}")

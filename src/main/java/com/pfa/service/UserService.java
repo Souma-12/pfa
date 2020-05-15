@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.User;
+import com.pfa.dto.LoginRequest;
+import com.pfa.entity.User;
 
 
 public interface UserService {
@@ -17,5 +18,11 @@ public interface UserService {
 	List<User> findAll();
 
 	void delete(Long id);
+
+	public User findByUsername(String username);
+
+	public List<User> getAll();
+	public  Boolean  findByLogin (String email);
+	
 
 }

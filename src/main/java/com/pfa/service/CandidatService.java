@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Candidat;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Candidat;
 
 public interface CandidatService {
 	
@@ -17,6 +18,9 @@ public interface CandidatService {
 	List<Candidat> findAll();
 
 	void delete(Long id);
+
+	public List<Candidat> getAll();
+	
 	
 
 }

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pfa.Entity.Education;
+import com.pfa.entity.Education;
 import com.pfa.service.EducationService;
 
 

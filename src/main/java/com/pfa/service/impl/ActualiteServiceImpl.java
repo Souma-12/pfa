@@ -3,7 +3,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pfa.Entity.Actualite;
+import com.pfa.entity.Actualite;
 import com.pfa.repository.ActualiteRepository;
 import com.pfa.service.ActualiteService;
 @Service
@@ -33,6 +33,11 @@ public class ActualiteServiceImpl implements ActualiteService{
 
 	@Override
 	public List<Actualite> findAll() {
+		List<Actualite> result=actualiteRepository.findAll();
+		return result;
+	}
+	@Override
+	public List<Actualite> getAll() {
 		List<Actualite> result=actualiteRepository.findAll();
 		return result;
 	}

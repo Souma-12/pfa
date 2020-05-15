@@ -13,44 +13,44 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pfa.Entity.Candidat;
+import com.pfa.entity.Candidat;
 import com.pfa.service.CandidatService;
-
-
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/candidat")
 public class CandidatController {
 	Logger log = LoggerFactory.getLogger(CandidatController.class);
 	@Autowired
 	CandidatService candidatService;
-	@GetMapping("/candidat/{id}")
+
+	@GetMapping("/{id}")
 	public Candidat getCandidat(@PathVariable("id") Long id) {
 		log.info(" get candidat");
 		Candidat result = candidatService.getById(id);
 		log.info("candidat :{}", result.toString());
 		return result;
 	}
-	
-	
-	@DeleteMapping("/candidat/{id}")
+
+	@DeleteMapping("/{id}")
 	public void deleteCandidat(@PathVariable("id") Long id) {
 		log.info("delete candidat");
 		candidatService.delete(id);
 	}
-	
-	@PutMapping("/candidat")
+
+	@PutMapping("/")
 	public Candidat putCandidat(@RequestBody Candidat candidat) {
-		Candidat result=candidatService.create(candidat);
-	log.info("candidat :{}", result.toString());	
-	return result;
+		Candidat result = candidatService.create(candidat);
+		log.info("candidat :{}", result.toString());
+		return result;
 	}
-	
-	@PostMapping("/candidat")
+
+	@PostMapping("/save")
 	public Candidat postCandidat(@RequestBody Candidat candidat) {
-		Candidat result=candidatService.create(candidat);
-		log.info("candidat :{}", result.toString());	
+		log.info("candidat :{}", candidat);
+		candidat.setUsername(candidat.getEmail());
+		Candidat result = candidatService.create(candidat);
+		log.info("candidat :{}", result.toString());
 		return result;
 	}
 }

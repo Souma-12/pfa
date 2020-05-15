@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pfa.Entity.Langue;
+import com.pfa.entity.Langue;
 import com.pfa.repository.LangueRepository;
 import com.pfa.service.LangueService;
 
@@ -48,5 +48,10 @@ public class LangueServiceImpl implements LangueService {
 	}
 		
 	}
+
+	@Override
+	public List<Langue> getAll() {
+		List<Langue> result=langueRepository.findAll();
+		return result;}
 
 }

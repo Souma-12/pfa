@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Education;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Education;
 
 public interface EducationService {
 	
@@ -17,5 +18,5 @@ public interface EducationService {
 
 	void delete(Long id);
 	
-
+	public List<Education> getAll();
 }

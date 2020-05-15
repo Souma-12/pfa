@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pfa.Entity.Langue;
+import com.pfa.entity.Langue;
 import com.pfa.service.LangueService;
 
 

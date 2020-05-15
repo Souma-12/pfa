@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Domaine;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Domaine;
 
 
 public interface DomaineService {
@@ -19,5 +20,5 @@ public interface DomaineService {
 
 	void delete(Long id);
 	
-
+	public List<Domaine> getAll();
 }

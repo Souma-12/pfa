@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Entreprise;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Entreprise;
 
 public interface EntrepriseService {
 	
@@ -16,7 +17,8 @@ public interface EntrepriseService {
 	List< Entreprise> findAll();
 
 	void delete(Long id);
-	
 
+	
+	public List<Entreprise> getAll();
 
 }

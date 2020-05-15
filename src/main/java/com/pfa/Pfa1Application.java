@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-import com.pfa.Entity.Candidat;
+import com.pfa.entity.Candidat;
 import com.pfa.service.CandidatService;
 
 

@@ -2,7 +2,7 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Actualite;
+import com.pfa.entity.Actualite;
 
 
 public interface ActualiteService {
@@ -13,9 +13,11 @@ public interface ActualiteService {
 
 	Actualite update(Actualite actualite);
 
-	List<Actualite> findAll();
+     List<Actualite> findAll();
 
 	void delete(Long id);
+
+	public List<Actualite> getAll();
 	
 
 	

@@ -3,10 +3,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pfa.Entity.Entreprise;
+import com.pfa.entity.Entreprise;
 import com.pfa.repository.EntrepriseRepository;
 import com.pfa.service.EntrepriseService;
+
+
 @Service
+
 public class EntrepriseServiceImpl implements EntrepriseService {
 
 	@Autowired
@@ -34,6 +37,7 @@ public class EntrepriseServiceImpl implements EntrepriseService {
 		List<Entreprise> result=entrepriseRepository.findAll();
 		return result;
 	}
+	
 
 	@Override
 	public void delete(Long id) {
@@ -45,5 +49,10 @@ public class EntrepriseServiceImpl implements EntrepriseService {
 	}
 		
 	}
+
+	@Override
+	public List<Entreprise> getAll() {
+		List<Entreprise> result=entrepriseRepository.findAll();
+		return result;}
 
 }

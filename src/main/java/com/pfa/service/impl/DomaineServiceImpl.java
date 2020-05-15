@@ -4,7 +4,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pfa.Entity.Domaine;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Domaine;
 import com.pfa.repository.DomaineRepository;
 import com.pfa.service.DomaineService;
 @Service
@@ -50,4 +51,9 @@ public class DomaineServiceImpl implements DomaineService {
 		
 	}
 
+	@Override
+	public List<Domaine> getAll() {
+		List<Domaine> result=domaineRepository.findAll();
+		return result;
+	}
 }

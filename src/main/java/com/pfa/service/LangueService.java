@@ -2,7 +2,8 @@ package com.pfa.service;
 
 import java.util.List;
 
-import com.pfa.Entity.Langue;
+import com.pfa.entity.Actualite;
+import com.pfa.entity.Langue;
 
 
 public interface LangueService {
@@ -19,4 +20,5 @@ public interface LangueService {
 
 	void delete(Long id);
 
+	public List<Langue> getAll();
 }
